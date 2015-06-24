@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_checkpre"
+            style="@style/button_blue_style"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:text="实施交车前检查" />
+
+        <Button
+            android:id="@+id/btn_checkend"
+            style="@style/button_blue_style"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:text="完成交车前检查" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_notice"
+        style="@style/button_blue_style"
+<<<<<<< HEAD
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+=======
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+>>>>>>> origin/master
+        android:text="通知客户交车" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_catstart"
+            style="@style/button_blue_style"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:text="交车开始" />
+
+        <Button
+            android:id="@+id/btn_catover"
+            style="@style/button_blue_style"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:text="交车完成" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/ll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="7dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="条形码编号：" />
+
+        <TextView
+            android:id="@+id/tv_dlnum"
+            style="@style/item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="11111" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="7dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="车牌号：" />
+
+        <TextView
+            android:id="@+id/tv_carnum"
+            style="@style/item_text"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="11111" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_view"
+        android:layout_marginLeft="7dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="接待开始时间：" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/item_text"
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:text="11111" />
+    </LinearLayout>
+
+</RelativeLayout>

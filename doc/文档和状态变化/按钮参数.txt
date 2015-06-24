@@ -1,0 +1,42 @@
+页面处于sa 服务顾问（接待）
+1 扫描二维码 响应接口，作业开始 参数为worktype＝1  processtype＝1
+2 ［接待完成］ 响应接口，参数为worktype＝2  processtype＝1，留在本界面
+3  ［移交调度］响应接口，参数为worktype＝7  processtype＝2，跳回界面
+
+－－－－－－－－－－－－－－－
+
+页面处于车间调度（ct） 
+1 扫描二维码 响应接口，作业开始 参数为worktype＝1  processtype＝2
+2 ［派工完成］ 响应接口，参数为worktype＝2  processtype＝2，留在本界面
+3  ［移交保养（add）］响应接口，参数为worktype＝7  processtype＝3，跳回界面
+
+－－－－－－－－－－－－－－－
+页面处于技师（TC）
+1 扫描二维码 响应接口，作业开始 参数为worktype＝1  processtype＝3
+
+2 ［发行追加作业］ 响应接口，参数为worktype＝5  processtype＝3，留在本界面，按钮变成［sa答复追加意见］，按下，响应接口，参数为worktype＝6  processtype＝3，留在本界面
+
+3 ［中断作业］响应接口，参数为worktype＝3  processtype＝3，留在本界面，按钮变成［恢复作业］，按下，响应接口，参数为worktype＝4  processtype＝3，留在本界面
+
+4 ［作业结束］响应接口，参数为worktype＝2  processtype＝3，留在本界面
+
+5 ［移交质检］ 响应接口，参数为worktype＝7  processtype＝7，跳回
+－－－－－－－－－－－－－－－－－－－－
+页面处于质检（fm）
+1 扫描二维码 响应接口，作业开始 参数为worktype＝1  processtype＝7
+2［作业结束］响应接口，参数为worktype＝2  processtype＝7，留在本界面
+3 ［移交洗车（add）］ 响应接口，参数为worktype＝7  processtype＝5，跳回
+
+－－－－－－－－－－－－－－－－－－－－－－－
+页面处于（洗车）
+1  扫描二维码 响应接口，作业开始 参数为worktype＝1  processtype＝5
+2  ［洗车结束］ 响应接口，作业开始 参数为worktype＝2  processtype＝5
+3 ［移交SA（add）］ 响应接口，参数为worktype＝7  processtype＝6，跳回
+－－－－－－－－－－－－－－－－－－－－－－
+页面处于（服务顾问（交车））
+1  扫描二维码 响应接口，作业开始 参数为worktype＝1  processtype＝6
+2 ［实施交车前检查］ 响应接口，作业开始 参数为worktype＝8  processtype＝6 本界面
+3 ［完成交车前检查］ 响应接口，作业开始 参数为worktype＝9  processtype＝6 本界面
+4 ［通知客户交车］ 响应接口，作业开始 参数为worktype＝10  processtype＝6 本界面
+5 ［交车开始］响应接口，作业开始 参数为worktype＝11  processtype＝6 本界面
+6 ［交车完成］响应接口，作业开始 参数为worktype＝12  processtype＝6 跳转

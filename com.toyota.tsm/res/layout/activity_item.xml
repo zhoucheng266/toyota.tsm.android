@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/allbg" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title_bar" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title"
+        android:background="@color/black_actionbar" />
+
+    <LinearLayout
+        android:id="@+id/framg_ad"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/view_line"
+        android:orientation="vertical" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.toyota.tsm.pageindicator.TabPageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/framg_ad"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/view_line_1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_title_show"
+            style="@style/succ_title"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="作业中" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#00ffff" />
+
+        <TextView
+            android:id="@+id/my_number"
+            style="@style/succ_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="test1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#00ffff" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/succ_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:text="车牌号：" />
+
+            <EditText
+                android:id="@+id/my_car_number"
+                style="@style/edittext_noborder_style"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#00ffff" />
+
+        <TextView
+            android:id="@+id/my_time_s"
+            style="@style/succ_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="" />
+
+        <LinearLayout
+            android:id="@+id/id_fragment_lj"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+            android:layout_gravity="center_vertical"
+>>>>>>> origin/master
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/main_rdo_menu1"
+        style="@style/main_tabitem_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:checked="true"
+        android:gravity="center"
+        android:text="注销"
+        android:textSize="20sp" />
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightblack"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/btn_keyboard_key"
+        android:keyTextColor="@color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>

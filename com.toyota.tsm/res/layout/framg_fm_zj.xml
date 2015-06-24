@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/Btn_Insert"
+        style="@style/button_blue_style"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+<<<<<<< HEAD
+        android:layout_marginTop="20dp"
+=======
+        android:layout_marginTop="10dp"
+>>>>>>> origin/master
+        android:text="质检完成" />
+
+    <Button
+        android:id="@+id/Btn_Remove"
+        style="@style/button_blue_style"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:text="移交洗车" />
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/allbg" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title_bar" />
+
+    <com.zcproject.library.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="vertical"
+        ptr:ptrMode="both" >
+    </com.zcproject.library.pulltorefresh.library.PullToRefreshListView>
+
+    <RadioButton
+        android:id="@+id/main_rdo_menu1"
+        style="@style/main_tabitem_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:checked="true"
+        android:gravity="center"
+        android:text="注销"
+        android:textSize="20sp" />
+
+</RelativeLayout>

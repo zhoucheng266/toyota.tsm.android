@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_TC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <FrameLayout
+            android:id="@+id/framg_apptime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btn_apptime"
+                style="@style/button_blue_style"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+<<<<<<< HEAD
+                android:text="发行追加时间" />
+=======
+                android:text="发行追加作业" />
+>>>>>>> origin/master
+
+            <Button
+                android:id="@+id/btn_stopapptime"
+                style="@style/button_blue_style"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:text="SA答复追加意见"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/framg_resumed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/framg_apptime" >
+
+            <Button
+                android:id="@+id/btn_resumed"
+                style="@style/button_blue_style"
+<<<<<<< HEAD
+                android:layout_width="130dp"
+=======
+                android:layout_width="140dp"
+>>>>>>> origin/master
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:text="恢复作业"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_stopresumed"
+                style="@style/button_blue_style"
+<<<<<<< HEAD
+                android:layout_width="130dp"
+=======
+                android:layout_width="140dp"
+>>>>>>> origin/master
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:text="中断作业" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btn_over"
+            style="@style/button_blue_style"
+<<<<<<< HEAD
+            android:layout_width="130dp"
+=======
+            android:layout_width="140dp"
+>>>>>>> origin/master
+            android:layout_height="40dp"
+            android:layout_below="@+id/framg_resumed"
+            android:layout_margin="10dp"
+            android:text="作业结束" />
+
+        <Button
+            android:id="@+id/Btn_Remove"
+            style="@style/button_blue_style"
+<<<<<<< HEAD
+            android:layout_width="130dp"
+=======
+            android:layout_width="140dp"
+>>>>>>> origin/master
+            android:layout_height="40dp"
+            android:layout_below="@+id/framg_resumed"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/btn_over"
+            android:text="移交质检" />
+    </RelativeLayout>
+
+</LinearLayout>
