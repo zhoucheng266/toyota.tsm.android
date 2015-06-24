@@ -4,4 +4,19 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <!-- 标题栏 -->
+    <dimen name="fontsize_content_Large">20sp</dimen>
+    <dimen name="fontsize_content_normal">12sp</dimen>
+    <dimen name="fontsize_content_default">12sp</dimen>
+    <dimen name="fontsize_content_middle">14sp</dimen>
+    <dimen name="fontsize_button_Large">18sp</dimen>
+    <dimen name="fontsize_button_normal">18sp</dimen>
+    <dimen name="fontsize_button_min">16sp</dimen>
+    <dimen name="fontsize_title_max">20sp</dimen>
+    <dimen name="fontsize_title_min">18sp</dimen>
+    <dimen name="fontsize_title_button_max">18sp</dimen>
+    <dimen name="fontsize_title_button_middle">16sp</dimen>
+    <dimen name="fontsize_title_button_min">14sp</dimen>
+    <dimen name="fontsize_content_small">12sp</dimen>
+
 </resources>

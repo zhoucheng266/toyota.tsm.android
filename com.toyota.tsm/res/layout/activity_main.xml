@@ -1,18 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="${relativePackage}.${activityClass}" >
+    android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/main_scan_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <Button
-        android:id="@+id/btn_test"
-        android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" >
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+            </RelativeLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/main_rdo_menu1"
+                        style="@style/main_tabitem_bottom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="注销"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/main_rdo_menu2"
+                        style="@style/main_tabitem_bottom"
+                        android:checked="false"
+                        android:drawableTop="@drawable/tabitem_menu2_drawabletop"
+                        android:text="@string/main_tabitem_menu2"
+                        android:visibility="gone" />
+
+                    <RadioButton
+                        android:id="@+id/main_rdo_menu3"
+                        style="@style/main_tabitem_bottom"
+                        android:checked="false"
+                        android:drawableTop="@drawable/tabitem_menu3_drawabletop"
+                        android:text="@string/main_tabitem_menu3"
+                        android:visibility="gone" />
+                </RadioGroup>
+                -->
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="测试" />
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightblack"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/btn_keyboard_key"
+        android:keyTextColor="@color/white"
+        android:visibility="gone" />
 
 </RelativeLayout>

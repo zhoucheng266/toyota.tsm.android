@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">com.toyota.tsm</string>
+    <string name="app_name">作业时间分析</string>
     <string name="hello_world">Hello world!</string>
-
+    <!-- 标题栏 -->
+    <string name="titlebar_btnBack">返回</string>
+    
+    
+    <!-- title 名称 -->
+  
+    <string name="main_tabitem_menu1">条形码登记</string>
+       <string name="main_tabitem_menu2">TSM登记记录</string>
+       <string name="main_tabitem_menu3">我的资料</string>
 </resources>

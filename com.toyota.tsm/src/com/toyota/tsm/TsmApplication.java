@@ -10,7 +10,11 @@ public class TsmApplication extends Application {
 		super.onCreate();
 
 		// 全局异常捕获
-		new UncaughtCrashHandler();
+<<<<<<< HEAD
+   //new UncaughtCrashHandler();
+=======
+ //new UncaughtCrashHandler();
+>>>>>>> origin/master
 	}
 
 }

@@ -19,20 +19,25 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 import com.toyota.tsm.R;
+import com.zcproject.library.helper.FuncHelper;
 import com.zxing.camera.CameraManager;
 import com.zxing.decoding.CaptureActivityHandler;
 import com.zxing.decoding.InactivityTimer;
 import com.zxing.view.ViewfinderView;
+
 /**
  * Initial the camera
+ * 
  * @author Ryan.Tang
  */
-public class CaptureActivity extends Activity implements Callback {
+public class CaptureActivity extends Activity implements Callback,
+		OnClickListener {
 
 	private CaptureActivity vThis = this;
 	private CaptureActivityHandler handler;
@@ -51,12 +56,22 @@ public class CaptureActivity extends Activity implements Callback {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_zxing_camera);
-		//ViewUtil.addTopView(getApplicationContext(), this, R.string.scan_card);
+		// ViewUtil.addTopView(getApplicationContext(), this,
+		// R.string.scan_card);
 		CameraManager.init(getApplication());
 		viewfinderView = (ViewfinderView) findViewById(R.id.zxing_viewfinder_view);
-	
+
 		hasSurface = false;
 		inactivityTimer = new InactivityTimer(this);
+		inittitlebar();
+	}
+
+	private void inittitlebar() {
+		TextView title = (TextView) findViewById(R.id.tv_title);
+		title.setText("条形码扫描");
+		Button leftbtn = (Button) findViewById(R.id.titlebar_btnLeft);
+		leftbtn.setOnClickListener(this);
+		leftbtn.setVisibility(View.VISIBLE);
 	}
 
 	@Override
@@ -80,7 +95,6 @@ public class CaptureActivity extends Activity implements Callback {
 		}
 		initBeepSound();
 		vibrate = true;
-		
 
 	}
 
@@ -99,9 +113,10 @@ public class CaptureActivity extends Activity implements Callback {
 		inactivityTimer.shutdown();
 		super.onDestroy();
 	}
-	
+
 	/**
 	 * Handler scan result
+	 * 
 	 * @param result
 	 * @param barcode
 	 */
@@ -109,20 +124,30 @@ public class CaptureActivity extends Activity implements Callback {
 		inactivityTimer.onActivity();
 		playBeepSoundAndVibrate();
 		String resultString = result.getText();
-		//FIXME
+
+		// FIXME
 		if (resultString.equals("")) {
-			Toast.makeText(CaptureActivity.this, "Scan failed!", Toast.LENGTH_SHORT).show();
-		}else {
-//			System.out.println("Result:"+resultString);
+			Toast.makeText(CaptureActivity.this, "扫描失败!", Toast.LENGTH_SHORT)
+					.show();
+			CaptureActivity.this.finish();
+		} else if (!FuncHelper.isVerifyCode(resultString)) {
+			Toast.makeText(CaptureActivity.this, "请扫描条形码!", Toast.LENGTH_SHORT)
+					.show();
+			return;
+		}
+
+		else {
+			// System.out.println("Result:"+resultString);
 			Intent resultIntent = new Intent();
 			Bundle bundle = new Bundle();
 			bundle.putString("result", resultString);
 			resultIntent.putExtras(bundle);
 			this.setResult(RESULT_OK, resultIntent);
+			CaptureActivity.this.finish();
 		}
-		CaptureActivity.this.finish();
+
 	}
-	
+
 	private void initCamera(SurfaceHolder surfaceHolder) {
 		try {
 			CameraManager.get().openDriver(surfaceHolder);
@@ -215,5 +240,18 @@ public class CaptureActivity extends Activity implements Callback {
 			mediaPlayer.seekTo(0);
 		}
 	};
+
+	@Override
+	public void onClick(View arg0) {
+		// TODO Auto-generated method stub
+		switch (arg0.getId()) {
+		case R.id.titlebar_btnLeft:
+			finish();
+			break;
+
+		default:
+			break;
+		}
+	}
 
 }

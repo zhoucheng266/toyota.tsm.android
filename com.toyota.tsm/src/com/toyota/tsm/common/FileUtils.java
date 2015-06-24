@@ -11,6 +11,8 @@ import java.util.TimeZone;
 
 import com.zcproject.library.helper.SDCardHelper;
 
+//import com.zcproject.library.helper.SDCardHelper;
+
 import android.graphics.Bitmap;
 
 public class FileUtils {
@@ -46,6 +48,38 @@ public class FileUtils {
 			e1.printStackTrace();
 		}
 	}
+	
+	
+	/**
+	 * @description 写文件
+	 * @created 2015-1-5 上午9:24:43
+	 * @author ZZB
+	 */
+	public static void writeFilepost(String content) {
+		PrintWriter pw = null;
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			sdf.setTimeZone(TimeZone.getTimeZone("GMT+08:00"));
+			String date = sdf.format(new Date());
+			String folderPath = SDCardHelper.getSDCardRootDirectory()
+					+ "/tsm/post";
+			File folder = new File(folderPath);
+			if (!folder.exists()) {
+				folder.mkdirs();
+			}
+			String filePath = folderPath + "/" + date + "-log.txt";
+			pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(
+					new FileOutputStream(filePath, true), "utf-8")), true);
+			SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+			String time = sdf1.format(new Date());
+		
+			pw.println(content);
+			pw.flush();
+			pw.close();
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+	}
 
 	/**
 	 * @description 把错误写到文件中
@@ -63,7 +97,7 @@ public class FileUtils {
 			File folder = new File(folderPath);
 			if (!folder.exists()) {
 				folder.mkdirs();
-			
+
 			}
 			String filePath = folderPath + "/" + date + "-log.txt";
 			pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(

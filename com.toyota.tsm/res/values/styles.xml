@@ -1,20 +1,101 @@
-<resources>
-
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="AppTheme" parent="android:Theme.Light.NoTitleBar">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+
+    </style>
+
+    <style name="AppFullScreenTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <!-- <item name="android:windowAnimationStyle">@style/ActivityFadeAnimation</item> -->
+    </style>
+
+    <!-- 标题栏按钮默认样式 -->
+    <style name="button_titlebar_base_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">50dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/fontsize_title_button_middle</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <!-- 标题栏返回按钮样式 -->
+    <style name="button_titlebar_left_style" parent="button_titlebar_base_style">
+        <item name="android:drawableLeft">@drawable/back</item>
+    </style>
+    <!-- 标题栏右边按钮样式 -->
+    <style name="button_titlebar_default_style" parent="button_titlebar_base_style"></style>
+    <!-- 按钮基类样式 -->
+    <style name="button_normal_base_style">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textSize">@dimen/fontsize_button_normal</item>
+    </style>
+    <!-- 蓝色背景+白色字体 按钮样式 -->
+    <style name="button_blue_style" parent="button_normal_base_style">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/btn_blue</item>
+    </style>
+
+    <!-- 红色背景+白色字体 按钮样式 -->
+    <style name="button_red_style" parent="button_normal_base_style">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/btn_red</item>
+    </style>
+
+    <!-- 文本框基类样式 -->
+    <style name="edittext_base_style">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textColor">@color/lightblack</item>
+        <item name="android:textSize">@dimen/fontsize_title_button_max</item>
+    </style>
+
+    <!-- 首行文本框样式 -->
+    <!-- 单个文本框样式 -->
+    <style name="edittext_one_style" parent="edittext_base_style">
+        <item name="android:background">@drawable/single_bg</item>
+    </style>
+
+    <style name="edittext_one_lower_style" parent="edittext_base_style">
+        <item name="android:background">@drawable/single_bg</item>
+        <item name="android:textSize">@dimen/fontsize_title_button_min</item>
+    </style>
+    <!-- 没边框文本框样式 -->
+    <style name="edittext_noborder_style" parent="edittext_base_style">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="base_title_style">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="reg_title_style" parent="base_title_style">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="reg_login_style" parent="base_title_style">
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="reg_name_style" parent="base_title_style">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="succ_title">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="succ_edit">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:gravity">center|left</item>
+    </style>
+
+    <style name="item_text">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center|left</item>
     </style>
 
 </resources>
