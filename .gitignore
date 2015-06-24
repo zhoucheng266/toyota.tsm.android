@@ -41,11 +41,3 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-*.class
-*.jar
-com.toyota.tsm/bin/res/crunch/drawable-hdpi/login_pwd_left.png
-*.png
-com.toyota.tsm/res/drawable/bg_reg.xml
-*.xml
-com.toyota.tsm/src/com/toyota/broadcast/ConnectionChangeReceiver.java
-*.java
